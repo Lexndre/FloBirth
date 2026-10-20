@@ -17,7 +17,7 @@ async function buildBirthdayCake() {
     renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.25;
     renderer.domElement.setAttribute('role', 'img');
-    renderer.domElement.setAttribute('aria-label', 'Gâteau en forme de pilon de poulet frit avec deux bougies formant le nombre 23');
+    renderer.domElement.setAttribute('aria-label', 'Gâteau en forme de pilon de poulet frit avec deux bougies formant le nombre 22');
     stage.append(renderer.domElement);
     scene.add(new THREE.HemisphereLight(0xfff8e9, 0x7c614b, 2.5));
     const key = new THREE.DirectionalLight(0xffedd5, 4); key.position.set(-3, 7, 5); key.castShadow = true;
@@ -65,7 +65,7 @@ async function buildBirthdayCake() {
       mesh(new THREE.CylinderGeometry(.035,.035,.3,12), ivory, [x,1.38,.08], null, candleGroup);
     }
     numberCandle([[-.22,.56],[-.2,.75],[0,.86],[.22,.77],[.22,.59],[0,.39],[-.22,.15],[-.2,0],[.22,0]],-.68);
-    numberCandle([[-.2,.77],[0,.86],[.22,.72],[.16,.49],[-.04,.44],[.2,.36],[.22,.13],[0,-.01],[-.23,.08]],.02);
+    numberCandle([[-.22,.56],[-.2,.75],[0,.86],[.22,.77],[.22,.59],[0,.39],[-.22,.15],[-.2,0],[.22,0]],.02);
     const flames = new THREE.Group(); candleGroup.add(flames);
     [-.68,.02].forEach(x => {
       mesh(new THREE.CylinderGeometry(.012,.012,.12,8), material('#4d3221'), [x,2.4,.08], null, candleGroup);

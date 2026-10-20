@@ -1,4 +1,4 @@
-# Les 23 ans de Bebou
+# Les 22 ans de Bebou
 
 Site pour **ASSOUA EBAH NANCY-ERINE FLORELLE**, alias Bebou. HTML, CSS, JavaScript et Three.js 0.180.0 (fichiers locaux dans `vendor/`, licence MIT incluse). Aucune compilation ni installation npm nécessaire.
 
@@ -34,7 +34,7 @@ Palette définie dans `sections.css` : fond **#E2E0D1**, textes **#7C614B**, acc
 
 ## Gâteau 3D
 
-Modèle procédural de gâteau trompe-l’œil en forme de pilon de poulet frit : panure, os, glaçage, assiette et bougies en volume « 23 ». Tourner avec la souris, le doigt ou les deux boutons. « Souffler mes bougies » éteint les flammes et lance des confettis ; « Rallumer les bougies » rétablit les flammes. L’animation automatique respecte la préférence système de réduction des animations. Un message de remplacement apparaît si la 3D n’est pas disponible.
+Modèle procédural de gâteau trompe-l’œil en forme de pilon de poulet frit : panure, os, glaçage, assiette et bougies en volume « 22 ». Tourner avec la souris, le doigt ou les deux boutons. « Souffler mes bougies » éteint les flammes et lance des confettis ; « Rallumer les bougies » rétablit les flammes. L’animation automatique respecte la préférence système de réduction des animations. Un message de remplacement apparaît si la 3D n’est pas disponible.
 
 Le site est local et n’a pas été publié en ligne.
 
