@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#E2E0D1" name="theme-color">
+    <meta content="Une petite surprise pour une grande journée. Joyeux anniversaire, Florelle !" name="description">
+    <title>Pour Florelle · Joyeux anniversaire</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="sections.css" rel="stylesheet">
+    <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='20' fill='%23DE8FF2'/%3E%3Ctext x='40' y='56' text-anchor='middle' font-size='48' fill='%237C614B'%3EB%3C/text%3E%3C/svg%3E"
+          rel="icon">
+    <script defer src="content.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="cake.js"></script>
+</head>
+<body>
+<dialog id="welcome" aria-labelledby="welcome-title">
+    <p class="eyebrow">20 OCTOBRE · JUSTE POUR TOI</p>
+    <span class="welcome-heart" aria-hidden="true">♡</span>
+    <h2 id="welcome-title">Bebou,<br><em>cette petite surprise<br>est pour toi.</em></h2>
+    <p>Prends ton temps. Il y a un peu de nous<br>dans chaque détail.</p>
+    <button class="primary" id="discover">Découvrir <span>↗</span></button>
+    <p class="welcome-sound">Avec le son, c’est encore plus doux ♫</p>
+</dialog>
+<audio id="background-audio" loop preload="auto"></audio>
+<audio id="celebration-audio" preload="auto"></audio>
+<p class="audio-status" hidden id="audio-status" role="status"></p>
+<canvas aria-hidden="true" id="confetti"></canvas>
+<header class="header"><a class="wordmark" href="#">Bebou<span>✳</span></a><span class="header-note">23 ANS · UN MONDE DE POSSIBILITÉS</span>
+    <button aria-pressed="false" class="sound" id="sound">♫ <span>Activer la musique</span></button>
+</header>
+<main>
+    <section aria-labelledby="title" class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow"><span></span> AUJOURD’HUI, TOUT EST POUR TOI</p>
+            <h1 class="personal-title" id="title">Je me croyais<br>bien seul jusqu’à<br>ce que tu arrives<br><em>dans ma
+                vie.</em></h1>
+            <p class="intro">23 ans. Mille possibilités.<br>Et une petite surprise, juste pour toi, Bebou.</p>
+            <div class="handnote">fait avec beaucoup d’affection <span>♡</span></div>
+        </div>
+        <div class="hero-art portrait-art">
+            <span aria-hidden="true" class="orbit orbit-one">✦</span><span aria-hidden="true"
+                                                                           class="orbit orbit-two">✧</span>
+            <div class="portrait-frame"><img alt="Portrait de Florelle" hidden id="hero-photo">
+                <div id="portrait-empty"><span>♡</span>
+                    <p>Florelle</p><small>UNE PHOTO DE TOI, ICI</small></div>
+            </div>
+            <label class="media-picker portrait-picker" id="portrait-picker">Choisir sa photo <input accept="image/*"
+                                                                                                     id="portrait-input"
+                                                                                                     type="file"></label>
+            <div class="round-sticker"><strong>23</strong><em>tours de soleil</em></div>
+            <span class="art-caption">un peu de douceur, beaucoup de joie.</span>
+        </div>
+        <a class="scroll-hint" href="#wishes">LA SUITE DES SURPRISES <span>↓</span></a>
+    </section>
+    <details class="audio-settings" id="audio-settings">
+        <summary>Les sons de cette journée ♫</summary>
+        <div><label class="media-picker">Choisir la musique de fond <input accept="audio/*" id="background-input"
+                                                                           type="file"></label><label
+                class="media-picker">Choisir le son après les bougies <input accept="audio/*" id="celebration-input"
+                                                                             type="file"></label></div>
+        <p id="audio-selection-status" role="status"></p></details>
+    <div aria-hidden="true" class="marquee">
+        <div>JOYEUX ANNIVERSAIRE <span>✳</span> FLORELLE <span>✳</span> MAKE A WISH <span>✳</span> JOYEUX ANNIVERSAIRE
+            <span>✳</span> FLORELLE <span>✳</span> MAKE A WISH <span>✳</span></div>
+    </div>
+    <nav aria-label="Les surprises" class="chapter-nav"><a href="#wishes">01 · En français</a><a href="#english">02 · In
+        English</a><a href="#words">03 · Tes 28 mots</a><a href="#our-letter">04 · La lettre</a><a
+            href="#birthday-cake">05 · Le gâteau</a></nav>
+    <section class="video-section section" id="wishes">
+        <div class="section-top"><p class="eyebrow">01 / QUELQUES MOTS DANS MA LANGUE</p><span>♡</span></div>
+        <div class="video-heading"><h2>Joyeux anniversaire,<br><em>Bebou.</em></h2>
+            <p class="section-description">Il y a des choses qui se disent mieux de vive voix.<br>Cette petite vidéo est
+                pour toi.</p></div>
+        <div class="video-frame" data-video="fr">
+            <div class="video-empty"><span class="play-mark">▷</span>
+                <p>Un message, juste pour toi</p><small>EN FRANÇAIS · BIENTÔT ICI</small></div>
+            <video aria-label="Message d’anniversaire en français" controls hidden playsinline
+                   preload="none"></video>
+        </div>
+        <div class="video-footer"><span>♡ Avec toute mon affection</span><label class="media-picker">Choisir la vidéo
+            française <input accept="video/*" data-video-input="fr" type="file"></label></div>
+    </section>
+    <section class="video-section english-section section" id="english" lang="en">
+        <div class="section-top"><p class="eyebrow">02 / SAME LOVE, ANOTHER LANGUAGE</p><span>✧</span></div>
+        <div class="video-heading"><h2>Happy 23rd birthday,<br><em>Bebou.</em></h2>
+            <p class="section-description">A little wish for a beautiful soul.<br>Here’s to you, and everything that
+                comes next.</p></div>
+        <div class="video-frame" data-video="en">
+            <div class="video-empty"><span class="play-mark">▷</span>
+                <p>A little birthday wish</p><small>IN ENGLISH · COMING SOON</small></div>
+            <video aria-label="Birthday message in English" controls hidden playsinline preload="none"></video>
+        </div>
+        <div class="video-footer"><span>♡ Made with love, just for you</span><label class="media-picker">Choose the
+            English video <input accept="video/*" data-video-input="en" type="file"></label></div>
+    </section>
+    <section class="words-section section" id="words">
+        <div class="section-top"><p class="eyebrow">03 / CHAQUE LETTRE, UN PEU DE TOI</p><span>✿</span></div>
+        <h2>23 ans.<br><em>28 façons de te célébrer.</em></h2>
+        <p class="full-name">ASSOUA EBAH NANCY-ERINE FLORELLE <span>alias Bebou ♡</span></p>
+        <p class="words-invitation">Chaque mot a une petite pensée pour toi. Touche-le pour l’ouvrir.</p>
+        <div id="word-groups"></div>
+    </section>
+    <section class="letter-section section" id="our-letter">
+        <div><p class="eyebrow">04 / CE QUE JE GARDE PRÉCIEUSEMENT</p>
+            <h2>Une lettre.<br><em>Et un peu de nous.</em></h2>
+            <p class="section-description">Des mots à lire doucement. Et, entre les lignes,<br>quelques souvenirs à
+                ouvrir.</p></div>
+        <button aria-label="Ouvrir la lettre pour Bebou" class="envelope" id="open-letter-section"><span
+                class="envelope-flap"></span><span
+                class="envelope-note">Pour Bebou,<br><em>avec affection.</em></span><span class="envelope-seal">♡</span><span
+                class="envelope-action">OUVRIR MA LETTRE ↗</span></button>
+    </section>
+    <section class="finale section" id="birthday-cake"><p class="eyebrow">05 / UN GÂTEAU À TON GOÛT</p>
+        <h2>Un vœu.<br><em>Et du poulet !</em></h2>
+        <p>Un gâteau déguisé en poulet frit, parce que c’est toi.<br>23 bougies dans le cœur, un vœu à garder secret.
+        </p>
+        <div aria-label="Gâteau en 3D en forme de pilon de poulet frit" class="cake-stage" id="cake-stage">
+            <div id="cake-fallback"><span>🍗</span>
+                <p id="cake-status" role="status">Ton gâteau se prépare…</p></div>
+        </div>
+        <div class="cake-controls">
+            <button aria-label="Tourner le gâteau à gauche" id="rotate-left">↶</button>
+            <span>Glisse pour admirer ton gâteau</span>
+            <button aria-label="Tourner le gâteau à droite" id="rotate-right">↷</button>
+        </div>
+        <button class="primary" id="celebrate">Souffler mes bougies <span>✦</span></button>
+        <button class="relight" hidden id="relight">Rallumer les bougies</button>
+        <p id="celebration-message" role="status"></p>
+        <div id="final-message" class="final-message" hidden><span aria-hidden="true">♡</span><h2>Merci d’être arrivée<br><em>dans ma vie, Bebou.</em></h2><p>Cette journée est à toi.<br>Et cette petite pensée aussi.</p></div></section>
+</main>
+<footer><a class="wordmark" href="#">pour toi<span>✳</span></a>
+    <p>Une petite page. Une grande pensée pour Florelle.</p><span>AVEC AFFECTION ♡</span></footer>
+<dialog aria-labelledby="letter-title" id="letter">
+    <button aria-label="Fermer le petit mot" class="close" id="close-letter">×</button>
+    <p class="eyebrow">UNE LETTRE POUR TOI</p>
+    <h2 id="letter-title">Bebou,</h2>
+    <div id="personal-message"><p>Pour tes 23 ans, j’avais envie de te laisser un peu plus qu’un simple « joyeux
+        anniversaire ». Un petit coin où tu peux revenir, lire ces mots et sourire.</p>
+        <p>Je me croyais bien seul jusqu’à ce que tu arrives dans ma vie. Aujourd’hui, cette page est ma façon de te dire merci pour la place que tu y as prise.</p>
+        <p>Entre <a data-memory="0" href="#photo-1">ces petits moments à deux</a>, <a data-memory="1" href="#photo-2">nos
+            souvenirs préférés</a> et <a data-memory="2" href="#photo-3">tout ce qu’il nous reste à vivre</a>, il y a
+            quelque chose que je garde précieusement : nous.</p>
+        <p>Je te souhaite de la douceur, des rêves qui grandissent et de la joie à n’en plus finir. Que cette nouvelle
+            année t’apporte autant de belles choses que tu en mérites.</p></div>
+    <p class="letter-signature">🪓🅱️🎲, Bebou ♡</p>
+    <button class="primary" id="letter-done">Je garde ce petit mot <span>♡</span></button>
+</dialog>
+<dialog aria-labelledby="memory-title" id="memory-dialog">
+    <button aria-label="Revenir à la lettre" class="close" id="close-memory">×</button>
+    <p class="eyebrow">UN PETIT MORCEAU DE NOUS</p>
+    <h2 id="memory-title">Notre souvenir</h2>
+    <div class="memory-image"><img alt="" hidden id="memory-photo">
+        <video controls playsinline preload="none" hidden id="memory-video" aria-label="Vidéo de ce souvenir"></video>
+        <div id="memory-empty"><span>♡</span>
+            <p>Une photo ou une vidéo de nous prendra place ici.</p></div>
+    </div>
+    <p id="memory-caption"></p><label class="media-picker" id="photo-picker">Choisir une photo ou une vidéo <input
+        accept="image/*,video/*" id="memory-input" type="file"></label>
+    <button class="primary" id="back-to-letter">Revenir à la lettre <span>↩</span></button>
+</dialog>
+</body>
+</html>

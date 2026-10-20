@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+    --paper: #f7f2ea;
+    --ink: #333c2a;
+    --olive: #727b47;
+    --pink: #ebbed0;
+    --line: #deded0;
+    --serif: 'DM Serif Display', Georgia, serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif
+}
+
+button, a, label {
+    -webkit-tap-highlight-color: transparent
+}
+
+button {
+    font: inherit;
+    cursor: pointer
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button:focus-visible, a:focus-visible, label:focus-within {
+    outline: 3px solid #b75679;
+    outline-offset: 6px
+}
+
+.header {
+    height: 100px;
+    max-width: 1380px;
+    padding: 0 6%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.wordmark {
+    font-family: var(--serif);
+    font-size: 32px;
+    letter-spacing: -1px
+}
+
+.wordmark span {
+    color: var(--olive);
+    margin-left: 7px
+}
+
+.header-note, .eyebrow, .sound, .card-bottom, .card-heading, .scroll-hint, .art-caption, footer > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600
+}
+
+.sound {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    padding: 12px 17px;
+    font-size: 10px;
+    letter-spacing: .8px
+}
+
+.hero {
+    position: relative;
+    max-width: 1240px;
+    margin: auto;
+    min-height: 735px;
+    padding: 62px 5% 100px;
+    display: grid;
+    grid-template-columns:1.1fr 1fr;
+    gap: 40px;
+    align-items: center
+}
+
+.eyebrow {
+    font-size: 10px;
+    line-height: 1.8;
+    margin: 0 0 23px
+}
+
+.eyebrow > span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--olive);
+    border-radius: 50%;
+    margin-right: 8px
+}
+
+h1 {
+    position: relative;
+    font-family: var(--serif);
+    font-size: clamp(62px, 6.6vw, 91px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -3px;
+    margin: 0 0 26px
+}
+
+h1 em, h2 em {
+    color: var(--olive);
+    font-weight: 400
+}
+
+.title-star {
+    position: absolute;
+    font-size: 58px;
+    color: var(--olive);
+    transform: rotate(12deg);
+    margin: 10px 0 0 25px
+}
+
+.intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #747569;
+    margin: 0 0 25px
+}
+
+.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    border: 0;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: transform .2s, background .2s
+}
+
+.primary:hover {
+    background: var(--olive);
+    transform: translateY(-3px)
+}
+
+.primary span {
+    font-size: 20px
+}
+
+.handnote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    transform: rotate(-4deg);
+    margin-top: 25px;
+    color: #838771
+}
+
+.handnote span {
+    font-size: 23px
+}
+
+.hero-art {
+    position: relative;
+    padding: 20px 15px 0
+}
+
+.birthday-card {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: var(--pink);
+    padding: 28px 27px 22px;
+    border-radius: 170px 170px 8px 8px;
+    transform: rotate(7deg);
+    box-shadow: 14px 20px 0 #e8e8da;
+    position: relative
+}
+
+.card-heading {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 40px
+}
+
+.card-heading span {
+    margin-left: 14px
+}
+
+.cake {
+    width: 100%;
+    display: block;
+    margin: -24px 0 -35px
+}
+
+.card-title {
+    font-family: var(--serif);
+    text-align: center;
+    font-size: 57px;
+    letter-spacing: -2px;
+    line-height: .95
+}
+
+.card-title i {
+    font-weight: 400
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    padding-top: 14px;
+    border-top: 1px solid #bc91a14d
+}
+
+.round-sticker {
+    position: absolute;
+    bottom: 44px;
+    left: -21px;
+    border-radius: 50%;
+    background: #d7dda6;
+    width: 107px;
+    height: 107px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.1;
+    transform: rotate(-13deg);
+    box-shadow: 0 4px 14px #333c2a12
+}
+
+.round-sticker span {
+    font-size: 24px;
+    margin-top: 3px
+}
+
+.orbit {
+    position: absolute;
+    color: var(--olive);
+    z-index: 1
+}
+
+.orbit-one {
+    font-size: 57px;
+    right: -20px;
+    top: 0
+}
+
+.orbit-two {
+    font-size: 48px;
+    left: -26px;
+    top: 125px
+}
+
+.art-caption {
+    position: absolute;
+    bottom: -55px;
+    left: 70px;
+    letter-spacing: .2px;
+    font-size: 11px;
+    font-family: var(--serif);
+    font-style: italic
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 22px;
+    left: 5%;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    font-size: 9px
+}
+
+.scroll-hint span {
+    font-size: 20px
+}
+
+.marquee {
+    overflow: hidden;
+    background: #dfe3c9;
+    padding: 21px 0;
+    white-space: nowrap;
+    border-top: 1px solid #c9cdb4;
+    border-bottom: 1px solid #c9cdb4
+}
+
+.marquee > div {
+    width: max-content;
+    font-size: 13px;
+    letter-spacing: 4px;
+    animation: marquee 38s linear infinite
+}
+
+.marquee span {
+    font-size: 21px;
+    vertical-align: middle;
+    margin: 0 42px
+}
+
+.section {
+    max-width: 1240px;
+    margin: auto;
+    padding: 90px 5%
+}
+
+.section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.section-top > span {
+    font-size: 38px;
+    color: var(--olive)
+}
+
+h2 {
+    font: 400 clamp(38px, 4.4vw, 58px)/1.08 var(--serif);
+    letter-spacing: -1.4px;
+    margin: 10px 0 35px
+}
+
+.wish-grid {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 50px
+}
+
+.wish {
+    position: relative;
+    border-top: 1px solid #c9cbb9;
+    padding: 27px 0 30px
+}
+
+.wish-icon {
+    font-size: 39px;
+    color: var(--olive)
+}
+
+h3 {
+    font: 400 31px var(--serif);
+    margin: 20px 0 10px
+}
+
+.wish p {
+    color: #717565;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 260px
+}
+
+.wish-number {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    font-size: 10px;
+    color: #929580
+}
+
+.memories {
+    border-top: 1px solid var(--line)
+}
+
+.section-description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #717565;
+    max-width: 480px
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 35px;
+    margin: 55px 0 30px
+}
+
+.polaroid {
+    display: block;
+    background: #fffdf7;
+    padding: 14px 14px 22px;
+    box-shadow: 0 10px 25px #333c2a0c;
+    transform: rotate(-5deg);
+    cursor: pointer;
+    transition: transform .25s
+}
+
+.polaroid:nth-child(2) {
+    transform: rotate(4deg);
+    margin-top: 20px
+}
+
+.polaroid:nth-child(3) {
+    transform: rotate(-3deg)
+}
+
+.polaroid:hover {
+    transform: rotate(0) translateY(-8px)
+}
+
+.photo-placeholder {
+    position: relative;
+    aspect-ratio: 1;
+    background: #e4e7d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.polaroid:nth-child(2) .photo-placeholder {
+    background: #eed9dd
+}
+
+.polaroid:nth-child(3) .photo-placeholder {
+    background: #e8dfce
+}
+
+.photo-placeholder > span {
+    font-size: 80px;
+    color: #818b55
+}
+
+.polaroid:nth-child(2) .photo-placeholder > span {
+    color: #b2738c
+}
+
+.photo-placeholder small {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    margin-top: 20px
+}
+
+.photo-placeholder img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0
+}
+
+.polaroid input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px
+}
+
+.photo-caption {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    text-align: center;
+    padding-top: 19px;
+    font-size: 20px
+}
+
+.photo-note {
+    font-size: 11px;
+    color: #858877;
+    line-height: 1.8;
+    margin-top: 45px
+}
+
+.finale {
+    position: relative;
+    text-align: center;
+    background: #e6e9d9;
+    max-width: none;
+    padding: 85px 20px
+}
+
+.finale h2 {
+    font-size: clamp(50px, 6vw, 76px);
+    margin-bottom: 20px
+}
+
+.finale > p:not(.eyebrow) {
+    font-size: 14px;
+    color: #717565;
+    line-height: 1.7
+}
+
+.finale .primary {
+    margin-top: 18px
+}
+
+.finale-star {
+    display: block;
+    color: var(--olive);
+    font-size: 47px;
+    margin-bottom: 15px
+}
+
+#celebration-message {
+    min-height: 24px;
+    margin-bottom: 0
+}
+
+footer {
+    max-width: 1380px;
+    margin: auto;
+    padding: 32px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px
+}
+
+footer p {
+    font-size: 12px;
+    color: #858877
+}
+
+footer > span {
+    font-size: 9px;
+    letter-spacing: 1px
+}
+
+dialog {
+    border: 0;
+    border-radius: 12px;
+    background: #fffaf2;
+    color: var(--ink);
+    max-width: 570px;
+    width: calc(100% - 32px);
+    padding: 48px;
+    box-shadow: 0 30px 100px #0002
+}
+
+dialog::backdrop {
+    background: #2731228c;
+    backdrop-filter: blur(6px)
+}
+
+dialog h2 {
+    font-size: 42px
+}
+
+dialog p {
+    font-size: 15px;
+    line-height: 1.85
+}
+
+.close {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    background: none;
+    border: 0;
+    font-size: 30px;
+    color: var(--ink)
+}
+
+.letter-signature {
+    font-family: var(--serif);
+    /*font-style: italic;*/
+    font-size: 25px !important;
+    color: var(--olive)
+}
+
+dialog .primary {
+    font-size: 12px;
+    gap: 15px
+}
+
+.flames {
+    transform-origin: center;
+    animation: flicker 2s ease-in-out infinite
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .7s, transform .7s
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes flicker {
+    50% {
+        opacity: .7;
+        transform: translateY(-3px)
+    }
+}
+
+@media (min-width: 1500px) {
+    .hero {
+        min-height: 790px
+    }
+}
+
+@media (max-width: 760px) {
+    .header {
+        height: 80px;
+        padding: 0 6%
+    }
+
+    .header-note {
+        display: none
+    }
+
+    .sound {
+        font-size: 9px;
+        padding: 10px 12px
+    }
+
+    .wordmark {
+        font-size: 28px
+    }
+
+    .hero {
+        grid-template-columns:1fr;
+        padding: 40px 7% 100px;
+        gap: 35px
+    }
+
+    .hero-copy {
+        max-width: 480px
+    }
+
+    h1 {
+        font-size: 70px
+    }
+
+    .title-star {
+        font-size: 44px;
+        margin-left: 18px
+    }
+
+    .hero-art {
+        max-width: 340px;
+        width: 100%;
+        margin: 0 auto 45px
+    }
+
+    .birthday-card {
+        padding: 20px 22px
+    }
+
+    .card-heading {
+        padding-top: 32px
+    }
+
+    .card-title {
+        font-size: 49px
+    }
+
+    .round-sticker {
+        width: 88px;
+        height: 88px;
+        font-size: 17px;
+        left: -5px
+    }
+
+    .orbit-one {
+        right: -3px
+    }
+
+    .orbit-two {
+        left: -6px
+    }
+
+    .art-caption {
+        left: 30px
+    }
+
+    .section {
+        padding: 60px 7%
+    }
+
+    .wish-grid {
+        grid-template-columns:1fr;
+        gap: 0;
+        margin-top: 20px
+    }
+
+    .wish {
+        padding: 24px 0
+    }
+
+    .wish p {
+        max-width: 100%
+    }
+
+    .wish-icon {
+        font-size: 31px
+    }
+
+    h3 {
+        margin-top: 12px
+    }
+
+    .photo-grid {
+        grid-template-columns:1fr;
+        max-width: 330px;
+        margin: 40px auto;
+        gap: 35px
+    }
+
+    .photo-note {
+        text-align: center
+    }
+
+    .finale {
+        padding: 60px 7%
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: 28px
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.4px
+    }
+
+    dialog {
+        padding: 38px 25px
+    }
+
+    dialog h2 {
+        font-size: 36px
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none
+    }
+}
